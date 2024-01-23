@@ -9,6 +9,6 @@ for (int i = 0; i < n; i++)
             Console.Write($"Введите строку #{i + 1}: ");
             inputArray[i] = Console.ReadLine();
         }
-        
+ string[] resultArray = FilterShortStrings(inputArray);       
 
 
