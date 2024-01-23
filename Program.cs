@@ -11,4 +11,16 @@ for (int i = 0; i < n; i++)
         }
  string[] resultArray = FilterShortStrings(inputArray);       
 
+ Console.WriteLine("\nИсходный массив строк:");
+        foreach (string str in inputArray)
+        {
+            Console.WriteLine(str);
+        }
+
+        Console.WriteLine("\nНовый массив строк (длина <= 3 символов):");
+        foreach (string str in resultArray)
+        {
+            Console.WriteLine(str);
+        }
+    }
 
