@@ -1,17 +1,22 @@
-﻿static void Main()
+using System;
+
+class Program
+{
+    static void Main()
     {
         Console.Write("Введите количество строк в массиве: ");
         int n = int.Parse(Console.ReadLine());
 
- string[] inputArray = new string[n];
-for (int i = 0; i < n; i++)
+        string[] inputArray = new string[n];
+        for (int i = 0; i < n; i++)
         {
             Console.Write($"Введите строку #{i + 1}: ");
             inputArray[i] = Console.ReadLine();
         }
- string[] resultArray = FilterShortStrings(inputArray);       
 
- Console.WriteLine("\nИсходный массив строк:");
+        string[] resultArray = FilterShortStrings(inputArray);
+
+        Console.WriteLine("\nИсходный массив строк:");
         foreach (string str in inputArray)
         {
             Console.WriteLine(str);
@@ -24,3 +29,9 @@ for (int i = 0; i < n; i++)
         }
     }
 
+    static string[] FilterShortStrings(string[] inputArray)
+    {
+       
+        return Array.FindAll(inputArray, str => str.Length <= 3);
+    }
+}
